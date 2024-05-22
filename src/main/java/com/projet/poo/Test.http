@@ -1,0 +1,264 @@
+GET http://localhost:3333/agent
+# find all agents
+
+
+###
+
+GET http://localhost:3333/agent/23kdi134l
+# find agent by id
+
+###
+
+POST http://localhost:3333/agent
+# add new agent
+Content-Type: application/json
+
+
+{
+  "id" : "23kdi134l",
+    "nom": "Temali",
+    "prenom": "Rahim",
+    "email": "rahim@gmail.com",
+  "telephone": "0666666666"
+}
+
+###
+
+PUT http://localhost:3333/agent/23kdi134l
+# edit agent
+Content-Type: application/json
+
+{
+    "nom": "Temallggggi"
+}
+
+
+###
+
+DELETE http://localhost:3333/agent/id
+# delete agent
+
+###
+
+# 2. Client
+
+GET http://localhost:3333/client
+# find all clients
+
+
+###
+
+GET http://localhost:3333/client/id
+# find client by id
+
+###
+
+POST http://localhost:3333/client
+# add new client
+Content-Type: application/json
+
+
+{
+  "id": "teshdi234",
+  "nom": "Temali",
+  "prenom": "Rahim",
+  "email": "rahim@gmail.com",
+  "telephone": "0666666666",
+  "descriptionRecherche": "je cherche un appartement",
+  "budget": 1000000
+}
+
+###
+
+PUT http://localhost:3333/client/teshdi234
+# edit client
+Content-Type: application/json
+
+{
+    "budget": 3000000
+}
+
+
+###
+
+DELETE http://localhost:3333/client/id
+# delete client
+
+###
+
+# 3. Bien
+
+GET http://localhost:3333/propriete
+# find all proprietes
+
+
+###
+
+GET http://localhost:3333/propriete/id
+# find propriete by id
+
+###
+
+POST http://localhost:3333/propriete
+# add new propriete
+Content-Type: application/json
+
+
+{
+  "prix":5000,
+  "description":"description",
+  "email":"rahim@gmail.com",
+  "telephone":"0612345678",
+  "adresse":"adresse",
+  "superficie": 100,
+  "nomProprietaire":"nomProprietaire",
+  "prenomProprietaire":"prenomProprietaire"
+
+}
+
+###
+
+PUT http://localhost:3333/propriete/id
+# edit propriete
+Content-Type: application/json
+
+{
+  "prix":30000
+
+}
+
+
+###
+
+DELETE http://localhost:3333/propriete/id
+# delete propriete
+
+
+###
+
+# Coseil
+
+GET http://localhost:3333/conseil
+# find all conseils
+
+
+###
+
+GET http://localhost:3333/conseil/id
+# find conseil by id
+
+###
+
+POST http://localhost:3333/conseil
+# add new conseil
+Content-Type: application/json
+
+
+{
+    "idClient": "Id",
+    "idPropriete":"Id",
+    "conseil": "Conseil 1"
+
+}
+
+###
+
+PUT http://localhost:3333/conseil/id
+# edit conseil
+Content-Type: application/json
+
+{
+    "conseil":"test"
+}
+
+
+###
+
+DELETE http://localhost:3333/conseil/id
+# delete conseil
+
+###
+# Visite
+
+GET http://localhost:3333/visite
+# find all visites
+
+
+###
+
+GET http://localhost:3333/visite/id
+# find visite by id
+
+###
+
+POST http://localhost:3333/visite
+# add new visite
+Content-Type: application/json
+
+
+{
+  "idConseil":"1",
+  "date":"2021-05-05"
+}
+
+###
+
+PUT http://localhost:3333/visite/id
+# edit visite
+Content-Type: application/json
+
+{
+    "date":"2021-06-05"
+}
+
+
+###
+
+DELETE http://localhost:3333/visite/id
+# delete visite
+
+
+###
+# 4. Contrat
+
+GET http://localhost:3333/contrat
+# find all contrats
+
+
+###
+
+GET http://localhost:3333/contrat/id
+# find contrat by id
+
+###
+
+POST http://localhost:3333/contrat
+# add new contrat
+Content-Type: application/json
+
+
+{
+"type":"vente",
+"idAgent":"f87f87f8f",
+"idClient":"f88ff8ff",
+"idPropriete":"1",
+"fraisAgence":3.5,
+"description":"Accord de vente",
+"prixFinal":50000
+}
+
+###
+
+PUT http://localhost:3333/contrat/id
+# edit contrat
+Content-Type: application/json
+
+{
+  "type":"location"
+}
+
+
+###
+
+DELETE http://localhost:3333/contrat/id
+# delete contrat
